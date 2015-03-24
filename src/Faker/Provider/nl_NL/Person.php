@@ -248,6 +248,7 @@ class Person extends \Faker\Provider\Person
      */
     public function lastName()
     {
+        /*
         $determinator = static::numberBetween(0, 3);
         if ($determinator === 0) {
             $lastName = static::randomElement(static::$longLastNames);
@@ -258,8 +259,11 @@ class Person extends \Faker\Provider\Person
         } elseif ($determinator === 3) {
             $lastName = static::randomElement(static::$dutchLastNames);
         }
-
+        
         return $lastName;
+        /**/
+
+        return static::randomElement(static::$dutchLastNames);
     }
 
     public function title($gender = null)
